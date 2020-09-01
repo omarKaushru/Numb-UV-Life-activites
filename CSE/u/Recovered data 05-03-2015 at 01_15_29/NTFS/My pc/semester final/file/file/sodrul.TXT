@@ -1,0 +1,5 @@
+<<write and read from file>>
+
+ # <<<NAME:sodrul>>
+
+ # <<ID:1401020010>>
