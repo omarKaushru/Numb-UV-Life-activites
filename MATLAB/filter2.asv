@@ -1,0 +1,3 @@
+I=imread('cameraman.tif');
+E=edge(I,'canny');
+imshow(E);

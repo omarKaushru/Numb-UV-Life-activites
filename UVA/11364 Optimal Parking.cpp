@@ -1,0 +1,23 @@
+///Accepted
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,n,a[100],i,sum;
+    cin>>t;
+    while(t--)
+    {
+        sum=0;
+        cin>>n;
+        for(i=0;i<n; i++)
+        cin>>a[i];
+        sort(a, a+n);
+        for(i=n-1; i!=0; i--)
+        {
+            sum=sum+(a[i]-a[i-1]);
+        }
+        sum=sum+(a[n-1]-a[0]);
+        cout<<sum<<endl;
+    }
+    return 0;
+}

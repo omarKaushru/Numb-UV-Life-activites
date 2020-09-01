@@ -1,0 +1,87 @@
+[Y,fs]=wavread('bird.wav'); % read file into memory */
+Z=awgn(Y,5,'measured');
+X = filter(d,Z);
+subplot(2,1,1);
+plot(Y)
+subplot(2,1,2);
+plot(Z)
+
+////
+[Y,fs]=wavread('bird.wav'); % read file into memory */
+Z=awgn(Y,5,'measured');
+
+subplot(2,1,1);
+plot(Y)
+subplot(2,1,2);
+plot(Z)
+////
+
+[wave,fs]=wavread('bird.wav'); % read file into memory */
+sound(wave,fs) % see what it sounds like */
+
+
+ 
+ % graph it – try zooming while its up…not much visible until you do*/
+
+ 
+ z=awgn(wave,10,'measured');
+
+
+ 
+subplot(2,1,1);
+plot(wave, fs)
+subplot(2,1,1);
+plot(z,fs)
+
+///
+
+
+[wave,fs]=wavread('bird.wav'); % read file into memory */
+sound(wave,fs) % see what it sounds like */
+t=0:1/fs:(length(wave)-1)/fs; % and get sampling frequency */
+plot(t,wave)
+ figure(1);
+          plot(t,wave)
+          title('Wave File');
+          ylabel('Amplitude');
+          xlabel('Length (in seconds)');
+ % graph it – try zooming while its up…not much visible until you do*/
+
+ 
+ z=awgn(wave,10,'measured');
+
+
+ t=0:1/fs:(length(wave)-1)/fs; % and get sampling frequency */
+plot(t,z)
+ figure(2);
+          plot(t,z)
+          title('Wave File');
+          ylabel('Amplitude');
+          xlabel('Length (in seconds)');
+
+/////////
+
+
+[wave,fs]=wavread('bird.wav'); % read file into memory */
+sound(wave,fs) % see what it sounds like */
+t=0:1/fs:(length(wave)-1)/fs; % and get sampling frequency */
+plot(t,wave);
+ figure(1);
+          plot(t,wave);
+          title('Wave File');
+          ylabel('Amplitude');
+          xlabel('Length (in seconds)');
+ % graph it – try zooming while its up…not much visible until you do*/
+
+  SNR=15;
+ z=awgn(wave,SNR,'measured');n=length(wave)-1; 
+f=0:fs/n:fs;
+wavefft=abs(fft(wave)); % perform Fourier Transform *
+
+figure(2);
+          plot(f,wavefft); % plot Fourier Transform */
+          xlabel('Frequency in Hz');
+          ylabel('Magnitude');
+          title('The Wave FFT');
+
+

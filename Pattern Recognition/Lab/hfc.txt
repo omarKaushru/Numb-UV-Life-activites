@@ -1,0 +1,17 @@
+load handel.mat
+ 
+hfile = 'handel.wave';
+wavwrite(y, Fs, hfile)
+clear y Fs
+[y, Fs, nbits] = wavread(hfile);
+sound(y, Fs);
+
+nsamples = 2 * Fs;
+[y2, Fs] = wavread(hfile, nsamples);
+sound(y2, Fs);
+pause(4)
+
+t=linspace(0,length(y)/Fs,length(y));
+plot(t,y)
+Nfft=1024;
+f=linspace(0,Fs,Nfft);

@@ -1,0 +1,13 @@
+I=imread('cameraman.tif');
+ imshow(I),figure
+%J=imhist(I);
+%histeq(I);
+
+%m=J(100); 
+H=fspecial('average',15);
+Y=filter2(H,I);
+imshow(Y/255),figure2
+imwrite(Y,test.png);
+
+j=imread('test.png');
+imshow(j),figure

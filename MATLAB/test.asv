@@ -1,0 +1,12 @@
+A=[1 225 3; 2 3 4; 4 5 6];
+A(1,1)=10;
+for R = 1:4
+     for C = 1:4
+         if A(R,C)>128
+         A(R,C) = 0;
+         else 
+             A(R,C)=1;
+         end
+     end
+end
+    A;
